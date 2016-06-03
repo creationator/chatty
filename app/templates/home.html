@@ -1,5 +1,10 @@
 <section class="container">
-  <h1 class="hero-title">{{ home.heroTitle }}</h1>
+  <div class="row">
+    <h1 class="hero-title">{{ home.heroTitle }}</h1>
+    <!-- <div ng-controller="ModalCtrl"> -->
+      <button type="button" ng-click="open()" class="btn btn-primary">New Room</button>
+    <!-- </div> -->
+  </div>
   <ul ng-repeat="Room in home.rooms.all">
       <li><a href="#">{{ Room.$id }}</a></li>
   </ul>
