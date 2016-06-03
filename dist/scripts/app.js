@@ -15,6 +15,6 @@
   }
 
   angular
-    .module('chittyChat', ['ui.router', 'firebase'])
+    .module('chittyChat', ['ui.router', 'firebase', 'ui.bootstrap'])
     .config(config);
 })();

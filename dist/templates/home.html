@@ -1,8 +1,6 @@
 <section class="container">
   <h1 class="hero-title">{{ home.heroTitle }}</h1>
-  <ul>
-
-      <li ng-repeat="Room in home.rooms.all"><a href="#">{{ Room.$id }}</a></li>
-
+  <ul ng-repeat="Room in home.rooms.all">
+      <li><a href="#">{{ Room.$id }}</a></li>
   </ul>
 </section>
