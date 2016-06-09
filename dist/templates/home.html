@@ -1,9 +1,19 @@
 <section class="container">
   <div class="row">
     <h1 class="hero-title">{{ home.heroTitle }}</h1>
-    <!-- <div ng-controller="ModalCtrl"> -->
-      <button type="button" ng-click="open()" class="btn btn-primary">New Room</button>
-    <!-- </div> -->
+    <div ng-controller="ModalCtrl">
+      <script type="text/ng-template" id="ModalShow.html">
+        <form>
+          <h3 class="modal-title">New room</h3>
+          <label for="roomName">Room Name</label>
+              <input ng-model="room.name" id="roomName" type="text" placeholder="Name of new room" />
+              <br />
+              <br />
+              <button type="submit" ng-click="saveRoom()" class="btn btn-primary">Save</button>
+        </form>
+      </script>
+      <button type="button" ng-click="open()" class="btn btn-primary">{{ modal.heroTitle }} now</button>
+    </div>
   </div>
   <ul ng-repeat="Room in home.rooms.all">
       <li><a href="#">{{ Room.$id }}</a></li>

@@ -6,6 +6,9 @@
 
     rooms.$add($firebaseArray(firebaseRef.child('rooms')));
 
+    /*create a array that will house the rooms create on the Firebase
+     database and use the add() method to add a new room.*/
+
     return {
       all: rooms
     };
@@ -14,5 +17,5 @@
   angular
     .module('chittyChat')
     .factory('Room', ['$firebaseArray', Room])
-    // .$add(Room);
+    // .$add();
 })();
